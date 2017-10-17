@@ -7,10 +7,15 @@ import java.io.PrintWriter;
 
 public class ParameterTest1Servlet extends HttpServlet {
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+    }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        String title = "Using GET Method to Read Form Data";
+        String title = "Using POST Method to Read Form Data";
         String docType =
                 "<!doctype html>\n";
 
@@ -29,6 +34,7 @@ public class ParameterTest1Servlet extends HttpServlet {
                 "</html>"
 
         );
+
 
     }
 }
